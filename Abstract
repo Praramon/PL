@@ -1,0 +1,24 @@
+Abstract class คือ class ที่ไม่สามารถสร้าง object ได้โดยตรง แต่ใช้เป็นแม่แบบให้ class อื่นๆ สืบทอด และมี abstract methods ซึ่ง subclass ต้องนำไป implement เอง
+ในตัวอย่างนี้ไม่มีการสร้าง abstract class แต่ถ้าจะทำให้ Animal เป็น abstract class จะต้องประกาศ method sound() เป็น abstract เพื่อบังคับให้ subclass อย่าง Dog และ Cat นำไปใช้งานจริง
+
+โค้ตที่มีการใช้abstract
+
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    def __init__(self):
+        print("create animal")
+
+    @abstractmethod
+    def sound(self):
+        pass
+
+class Dog(Animal):
+    def sound(self):
+        print("dog barks")
+
+class Cat(Animal):
+    def sound(self):
+        print("cat meows")
+
+ใน Animal เราสร้าง method sound() เป็น abstract method และบังคับให้ Dog และ Cat ต้องทำการ implement
