@@ -1,0 +1,24 @@
+1. Class:
+Class คือพิมพ์เขียวสำหรับการสร้างวัตถุ (objects) และบ่งบอกพฤติกรรม (methods) และคุณสมบัติ (attributes) ของ object นั้นๆ ในตัวอย่างนี้ Animal, Dog, และ Cat เป็น class ที่แสดงถึงพฤติกรรมและคุณสมบัติของสัตว์
+
+ตัวอย่างในโค้ด: class Animal เป็น class สำหรับสัตว์ทั่วไป
+2. Object (Instance):
+Object คือ instance ของ class ที่สร้างขึ้นจาก class และเป็นหน่วยการทำงานใน OOP ตัวอย่าง object ได้แก่ a, d, และ c ที่ถูกสร้างจาก class Animal, Dog, และ Cat
+
+ตัวอย่างในโค้ด: a = new Animal(), d = new Dog(), และ c = new Cat() เป็นการสร้าง objects
+3. Subclass (Derived Class):
+Subclass เป็น class ที่สืบทอดคุณสมบัติและพฤติกรรมจาก superclass ซึ่งในตัวอย่างนี้ Dog และ Cat เป็น subclass ของ Animal
+
+ตัวอย่างในโค้ด: class Dog extends Animal ใน Java, class Dog : public Animal ใน C++, และ class Dog(Animal) ใน Python
+4. Message:
+Message ใน OOP หมายถึงการเรียกใช้ method ของ object นั้นๆ เช่น sound() ถูกส่งไปยัง object a, d, และ c ให้ทำงาน
+
+ตัวอย่างในโค้ด: a.sound(), d.sound(), และ c.sound()
+5. Inheritance:
+Inheritance (การสืบทอด) คือการที่ subclass รับเอา attributes และ methods ของ superclass โดย Dog และ Cat รับคุณสมบัติของ Animal มาใช้
+
+ตัวอย่างในโค้ด: Dog และ Cat สืบทอด method sound() มาจาก Animal
+6. Polymorphism:
+Polymorphism (การทำงานหลายรูปแบบ) หมายถึงการที่ subclass สามารถเปลี่ยนแปลงพฤติกรรมของ method ของ superclass ในตัวอย่างนี้ method sound() ของ Dog และ Cat มีการ override จาก Animal
+
+ตัวอย่างในโค้ด: d.sound() พิมพ์ dog barks และ c.sound() พิมพ์ cat meows ซึ่ง override method sound() ของ Animal
